@@ -12,7 +12,7 @@
 
 #include <init.h>
 
-int			error(char *msg)
+int	error(char *msg)
 {
 	ft_putstr_fd("\e[0;31mError\e[0m", 2);
 	ft_putstr_fd(": ", 2);
@@ -21,7 +21,7 @@ int			error(char *msg)
 	return (0);
 }
 
-void		malloc_error(t_stack *s)
+void	malloc_error(t_stack *s)
 {
 	(void)s;
 	ft_putstr_fd("Malloc Error\n", 2);

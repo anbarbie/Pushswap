@@ -12,7 +12,7 @@
 
 #include <init.h>
 
-int		is_sort(t_stack *s)
+int	is_sort(t_stack *s)
 {
 	int	i;
 

@@ -13,7 +13,7 @@
 #include <push_swap.h>
 #include <limits.h>
 
-int			check_str_is_digit(char *str)
+int	check_str_is_digit(char *str)
 {
 	int		i;
 
@@ -32,7 +32,7 @@ int			check_str_is_digit(char *str)
 	return (0);
 }
 
-int			is_duplicate(char **tab)
+int	is_duplicate(char **tab)
 {
 	int		i;
 	int		value;
@@ -51,7 +51,7 @@ int			is_duplicate(char **tab)
 	return (0);
 }
 
-long		long_atoi(const char *nptr)
+long	long_atoi(const char *nptr)
 {
 	int		i;
 	int		negativ;
@@ -61,7 +61,7 @@ long		long_atoi(const char *nptr)
 	negativ = 1;
 	res = 0;
 	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-			|| nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\f')
+		|| nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\f')
 		i++;
 	if (nptr[i] == '-')
 		negativ = -1;
@@ -75,7 +75,7 @@ long		long_atoi(const char *nptr)
 	return (res * negativ);
 }
 
-int			check_error(char **argv)
+int	check_error(char **argv)
 {
 	int		i;
 	long	nb;

@@ -19,8 +19,13 @@ void	pa(t_stack *s)
 	if (s->topb == s->capacity)
 		return ;
 	value = s->arr[s->topb];
-	pop_b(s);
-	push_a(s, value);
+	if (s->topb < s->capacity)
+		s->topb++;
+	if (s->topa < s->capacity - 1)
+	{
+		s->topa++;
+		s->arr[s->topa] = value;
+	}
 }
 
 void	pb(t_stack *s)
@@ -30,6 +35,11 @@ void	pb(t_stack *s)
 	if (s->topa == -1)
 		return ;
 	value = s->arr[s->topa];
-	pop_a(s);
-	push_b(s, value);
+	if (s->topa > -1)
+		s->topa--;
+	if (s->topb > 0)
+	{
+		s->topb--;
+		s->arr[s->topb] = value;
+	}
 }

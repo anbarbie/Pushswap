@@ -12,7 +12,7 @@
 
 #include <push_swap.h>
 
-int			index_of_sort_arr(int *tab, int value, int len)
+int	index_of_sort_arr(int *tab, int value, int len)
 {
 	int		i;
 
@@ -22,13 +22,14 @@ int			index_of_sort_arr(int *tab, int value, int len)
 	return (i);
 }
 
-int			*copy_tab(t_stack *s)
+int	*copy_tab(t_stack *s)
 {
 	int		*tab;
 	int		i;
 
 	i = 0;
-	if (!(tab = malloc(sizeof(int) * s->capacity)))
+	tab = malloc(sizeof(int) * s->capacity);
+	if (!(tab))
 		malloc_error(s);
 	while (i < s->capacity)
 	{
@@ -38,7 +39,7 @@ int			*copy_tab(t_stack *s)
 	return (tab);
 }
 
-void		buble_tab(t_stack *s, int *tab)
+void	buble_tab(t_stack *s, int *tab)
 {
 	int		i;
 	int		j;
@@ -63,7 +64,7 @@ void		buble_tab(t_stack *s, int *tab)
 	}
 }
 
-int			convert_input(t_stack *s)
+int	convert_input(t_stack *s)
 {
 	int		*tab;
 	int		i;

@@ -36,7 +36,7 @@ void	top_or_down_b(t_stack *s, int max)
 	}
 }
 
-int		search_max_b(t_stack *s)
+int	search_max_b(t_stack *s)
 {
 	int		i;
 	int		max;
@@ -72,7 +72,8 @@ void	buble_max_b(t_stack *s)
 
 	while (s->topb != s->capacity - 2)
 	{
-		if ((max = search_max_b(s)) == -1)
+		max = search_max_b(s);
+		if (max == -1)
 			break ;
 		if (s->arr[s->topb] == max)
 			print_pa(s);

@@ -40,9 +40,9 @@ void	quick_sort(t_stack *s)
 	buble_max_b(s);
 }
 
-int		main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_stack s;
+	t_stack	s;
 	int		i;
 
 	i = 0;

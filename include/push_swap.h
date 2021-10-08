@@ -17,6 +17,7 @@
 void	quick_sort(t_stack *s);
 int		search_min_a(t_stack *s);
 int		search_max_a(t_stack *s);
+void	five_case(t_stack *s, int min, int max);
 void	sort_len_3(t_stack *s);
 void	buble_min(t_stack *s);
 void	full_push_to_a(t_stack *s);

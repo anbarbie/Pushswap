@@ -12,7 +12,7 @@
 
 #include <push_swap.h>
 
-int		search_min_a(t_stack *s)
+int	search_min_a(t_stack *s)
 {
 	int		i;
 	int		min;
@@ -28,7 +28,7 @@ int		search_min_a(t_stack *s)
 	return (min);
 }
 
-int		search_max_a(t_stack *s)
+int	search_max_a(t_stack *s)
 {
 	int	i;
 	int	max;
@@ -44,6 +44,26 @@ int		search_max_a(t_stack *s)
 	return (max);
 }
 
+void	five_case(t_stack *s, int min, int max)
+{
+	if (s->arr[2] == min && s->arr[1] == max)
+	{
+		printf("rrb\n");
+		printf("sa\n");
+	}
+	else if (s->arr[1] == min && s->arr[0] == max)
+		printf("sa\n");
+	else if (s->arr[0] == min && s->arr[1] == max)
+		printf("rra\n");
+	else if (s->arr[1] == min && s->arr[2] == max)
+		printf("ra\n");
+	else
+	{
+		printf("ra\n");
+		printf("sa\n");
+	}
+}
+
 void	sort_len_3(t_stack *s)
 {
 	int	min;
@@ -55,21 +75,6 @@ void	sort_len_3(t_stack *s)
 	{
 		min = search_min_a(s);
 		max = search_max_a(s);
-		if (s->arr[2] == min && s->arr[1] == max)
-		{
-			printf("rrb\n");
-			printf("sa\n");
-		}
-		else if (s->arr[1] == min && s->arr[0] == max)
-			printf("sa\n");
-		else if (s->arr[0] == min && s->arr[1] == max)
-			printf("rra\n");
-		else if (s->arr[1] == min && s->arr[2] == max)
-			printf("ra\n");
-		else
-		{
-			printf("ra\n");
-			printf("sa\n");
-		}
+		five_case(s, min, max);
 	}
 }

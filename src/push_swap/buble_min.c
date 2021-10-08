@@ -26,7 +26,7 @@ void	top_or_down_a(t_stack *s, int min)
 	}
 	else
 	{
-		while(s->arr[s->topa] != min)
+		while (s->arr[s->topa] != min)
 			print_ra(s);
 	}
 }
@@ -37,7 +37,7 @@ void	buble_min_a(t_stack *s)
 
 	while (s->topa > 1)
 	{
-		min	= search_min_a(s);
+		min = search_min_a(s);
 		if (s->arr[s->topa] == min)
 			print_pb(s);
 		else if (s->arr[s->topa - 1] == min)
