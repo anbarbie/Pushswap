@@ -6,7 +6,7 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:33:37 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/18 18:00:04 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:55:50 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (lst)
 	{
 		tmp = lst;
-		if (!(beg = ft_lstnew(f(tmp->content))))
+		beg = ft_lstnew(f(tmp->content));
+		if (!(beg))
 			return (NULL);
 		tmp = tmp->next;
 		while (tmp->next)
 		{
-			if (!(new = ft_lstnew(f(tmp->content))))
+			new = ft_lstnew(f(tmp->content));
+			if (!(new))
 			{
 				ft_lstclear(&beg, del);
 				return (NULL);

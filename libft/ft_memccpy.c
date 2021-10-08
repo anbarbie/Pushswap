@@ -6,7 +6,7 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:13:44 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/06 18:39:25 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:57:14 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	d = dest;
 	s = src;
 	while (n--)
-		if ((*d++ = *s++) == (char)c)
+	{
+		*d++ = *s++;
+		if ((*d) == (char)c)
 			return (d);
+	}
 	return (NULL);
 }

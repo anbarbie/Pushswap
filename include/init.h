@@ -27,5 +27,4 @@ int		check_error(char **av);
 int		error(char *msg);
 void	malloc_error(t_stack *s);
 
-
 #endif

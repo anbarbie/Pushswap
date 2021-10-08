@@ -6,7 +6,7 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 16:39:32 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/28 16:42:00 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:59:40 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	i = 0;
 	j = 0;
-	if (!(str = (char *)malloc(sizeof(char) *
-	(1 + ft_strlen(s1) + ft_strlen(s2)))))
+	str = (char *)malloc(sizeof(char) * (1 + ft_strlen(s1) + ft_strlen(s2)));
+	if (!(str))
 		return (NULL);
 	while (s1[j])
 	{

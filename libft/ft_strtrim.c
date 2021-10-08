@@ -6,13 +6,13 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 16:37:33 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/28 16:38:05 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:38:45 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_remove(char c, const char *set)
+int	ft_remove(char c, const char *set)
 {
 	size_t		i;
 	size_t		len;

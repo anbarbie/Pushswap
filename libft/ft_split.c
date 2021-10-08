@@ -6,16 +6,16 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 18:51:11 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/18 19:11:09 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:58:28 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		cpt_words(const char *s, char c)
+int	cpt_words(const char *s, char c)
 {
-	int i;
-	int cpt;
+	int	i;
+	int	cpt;
 
 	i = 0;
 	cpt = 0;
@@ -36,8 +36,8 @@ int		cpt_words(const char *s, char c)
 void	cpt_letters(const char *s, char c, char **tab)
 {
 	int	i;
-	int cpt;
-	int j;
+	int	cpt;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -51,7 +51,8 @@ void	cpt_letters(const char *s, char c, char **tab)
 			cpt++;
 			i++;
 		}
-		if (!(tab[j] = (char *)malloc((1 + cpt) * sizeof(char))))
+		tab[j] = (char *)malloc((1 + cpt) * sizeof(char));
+		if (!(tab[j]))
 			return ;
 		if (s[i])
 			i++;
@@ -62,8 +63,8 @@ void	cpt_letters(const char *s, char c, char **tab)
 void	assign_tab(const char *s, char c, char **tab)
 {
 	int	i;
-	int j;
-	int x;
+	int	j;
+	int	x;
 
 	j = 0;
 	x = 0;
@@ -92,7 +93,8 @@ char	**ft_split(const char *s, char c)
 {
 	char	**tab;
 
-	if (!(tab = (char **)malloc(cpt_words(s, c) * sizeof(char *))))
+	tab = (char **)malloc(cpt_words(s, c) * sizeof(char *));
+	if (!(tab))
 		return (NULL);
 	cpt_letters(s, c, tab);
 	assign_tab(s, c, tab);

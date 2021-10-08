@@ -28,6 +28,6 @@ void	rrr(t_stack *s);
 void	pop_a(t_stack *s);
 void	pop_b(t_stack *s);
 void	push_a(t_stack *s, int value);
-void	push_b(t_stack *s,int value);
+void	push_b(t_stack *s, int value);
 
 #endif

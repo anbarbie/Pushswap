@@ -6,7 +6,7 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:36:25 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/28 16:38:38 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:38:23 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		if (big[i] == little[0])
 		{
 			while (big[i + l] && big[i + l] == little[l] && little[l]
-			&& (size_t)(i + l) < len)
+				&& (size_t)(i + l) < len)
 				l++;
 			if (little[l] == '\0')
 				return ((char *)&big[i]);

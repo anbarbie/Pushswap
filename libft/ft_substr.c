@@ -6,7 +6,7 @@
 /*   By: antbarbi <antbarbi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 23:13:23 by antbarbi          #+#    #+#             */
-/*   Updated: 2019/11/22 20:07:55 by antbarbi         ###   ########.fr       */
+/*   Updated: 2021/10/08 19:00:25 by antbarbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (!(str = malloc(sizeof(char) * (len + 1))) || !s)
+	str = malloc(sizeof(char) * (len + 1));
+	if (!(str) || !s)
 		return (NULL);
 	if (start < ft_strlen(s))
 	{
