@@ -54,7 +54,7 @@ int	search_max_b(t_stack *s)
 	return (max);
 }
 
-void	end_buble_max(t_stack *s)
+void	advanced_sort2(t_stack *s)
 {
 	if (s->topb < s->capacity - 1 && s->arr[s->topb] < s->arr[s->topb + 1])
 	{
@@ -66,7 +66,7 @@ void	end_buble_max(t_stack *s)
 	print_pa(s);
 }
 
-void	buble_max_b(t_stack *s)
+void	advanced_sort(t_stack *s)
 {
 	int		max;
 
@@ -90,5 +90,5 @@ void	buble_max_b(t_stack *s)
 				print_sa(s);
 		}
 	}
-	end_buble_max(s);
+	advanced_sort2(s);
 }

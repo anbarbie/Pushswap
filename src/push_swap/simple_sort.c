@@ -31,7 +31,7 @@ void	top_or_down_a(t_stack *s, int min)
 	}
 }
 
-void	buble_min_a(t_stack *s)
+void	sort_stack_a(t_stack *s)
 {
 	int	min;
 
@@ -61,8 +61,8 @@ void	full_push_to_a(t_stack *s)
 		print_pa(s);
 }
 
-void	buble_min(t_stack *s)
+void	simple_sort(t_stack *s)
 {
-	buble_min_a(s);
+	sort_stack_a(s);
 	full_push_to_a(s);
 }

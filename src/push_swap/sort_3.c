@@ -64,7 +64,7 @@ void	five_case(t_stack *s, int min, int max)
 	}
 }
 
-void	sort_len_3(t_stack *s)
+void	sort_3(t_stack *s)
 {
 	int	min;
 	int	max;

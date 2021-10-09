@@ -24,7 +24,7 @@ SRC = $(INIT) $(PUSH_SWAP) $(ACTIONS)
 
 INIT = init.c error.c check_error.c is_sort.c
 PUSH_SWAP = push_print.c reverse_print.c rotate_print.c swap_print.c \
-			buble_max.c buble_min.c sort_len_3.c convert_input.c
+			advanced_sort.c simple_sort.c sort_3.c convert_input.c
 ACTIONS = swap.c push.c rotate.c reverse.c 
 
 INIT := $(INIT:%.c=INIT/%.c)

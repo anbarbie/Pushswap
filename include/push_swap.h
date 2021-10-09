@@ -14,16 +14,17 @@
 # define PUSH_SWAP_H
 # include <init.h>
 
-void	quick_sort(t_stack *s);
+void	quick_sort(t_stack *s, int chunk);
 int		search_min_a(t_stack *s);
 int		search_max_a(t_stack *s);
 void	five_case(t_stack *s, int min, int max);
-void	sort_len_3(t_stack *s);
-void	buble_min(t_stack *s);
+void	sort_3(t_stack *s);
+void	simple_sort(t_stack *s);
 void	full_push_to_a(t_stack *s);
-void	buble_min_a(t_stack *s);
+void	sort_stack_a(t_stack *s);
 void	top_or_down_a(t_stack *s, int min);
-void	buble_max_b(t_stack *s);
+void	advanced_sort(t_stack *s);
+void	advanced_sort2(t_stack *s);
 int		search_max_b(t_stack *s);
 void	top_or_down_b(t_stack *s, int max);
 void	print_sa(t_stack *s);
