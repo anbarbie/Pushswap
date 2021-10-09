@@ -27,9 +27,9 @@ PUSH_SWAP = push_print.c reverse_print.c rotate_print.c swap_print.c \
 			advanced_sort.c simple_sort.c sort_3.c convert_input.c
 ACTIONS = swap.c push.c rotate.c reverse.c 
 
-INIT := $(INIT:%.c=INIT/%.c)
+INIT := $(INIT:%.c=init/%.c)
 PUSH_SWAP := $(PUSH_SWAP:%.c=push_swap/%.c)
-ACTIONS := $(ACTIONS:%.c=ACTIONS/%.c)
+ACTIONS := $(ACTIONS:%.c=actions/%.c)
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 
 all: $(NAME)
