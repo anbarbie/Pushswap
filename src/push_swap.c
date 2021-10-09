@@ -61,7 +61,7 @@ int	main(int ac, char **av)
 		if (s.capacity <= 100)
 			quick_sort(&s, 5);
 		else
-			quick_sort(&s, 11);
+			quick_sort(&s, 10);
 	}
 	free(s.arr);
 }
